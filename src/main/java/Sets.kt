@@ -1,5 +1,29 @@
 import atomictest.*
 fun main(){
+    mutableSet()
+
+}
+
+
+fun removeDuplicates(){
+    //List에서 중복을 제거할려면 Set으로 변환하라.
+    val list = listOf(3,3,2,1,2)
+    list.toSet() eq setOf(1,2,3)
+    list.distinct() eq listOf(3,2,1)
+    "abbcc".toSet() eq setOf('a','b','c')
+}
+fun mutableSet(){
+    //가변Set
+    val mutableSet = mutableSetOf<Int>()
+    mutableSet += 42
+    mutableSet += 42
+    mutableSet eq setOf(42)
+    mutableSet -= 42
+    mutableSet eq setOf<Int>()
+}
+
+
+fun etc(){
     //Set은 각각의 값이 오직 하나만 존재할 수 있는 컬렉션이다
     val intSet = setOf(1,1,2,3,9,9,4)
     //중복이 없다
@@ -28,5 +52,7 @@ fun main(){
     intSet subtract setOf(0,1,9,10) eq setOf(2,3,4)
     intSet - setOf(0,1,9,10) eq setOf(2,3,4)
 
-
 }
+
+
+
