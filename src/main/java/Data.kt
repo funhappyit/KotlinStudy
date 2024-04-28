@@ -7,11 +7,16 @@ fun main(){
 //    data.i eq 10
 //    data.i = 20
 //    default()
-    val lc = LogChanges()
-    lc.n eq 0
-    lc.n = 2
-    lc.n eq 2
-    trace eq "0 becomes 2"
+//    val lc = LogChanges()
+//    lc.n eq 0
+//    lc.n = 2
+//    lc.n eq 2
+//    trace eq "0 becomes 2"
+    val counter = Counter1()
+    repeat(10){
+        counter.inc()
+    }
+    counter.value eq 10
 
 }
 
@@ -42,4 +47,9 @@ class LogChanges{
         trace("$field becomes $value")
         field =value
     }
+}
+class Counter1{
+    var value: Int = 0
+    private set
+    fun inc() = value++
 }
