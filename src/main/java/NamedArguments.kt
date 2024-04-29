@@ -18,5 +18,5 @@ fun createString(){
     list.joinToString() eq "1, 2, 3"
     list.joinToString(prefix = "(", postfix = ")") eq "(1, 2, 3)"
 }
-class DefaultArg
+
 
