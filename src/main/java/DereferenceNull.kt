@@ -32,8 +32,4 @@ fun chainedCalls(){
     val bob = Person1("Bob")
     val charlie = Person1("Charlie",bob)
     println( charlie.friend?.name )
-
-
-
-
 }
